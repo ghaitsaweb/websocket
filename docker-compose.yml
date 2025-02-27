@@ -1,0 +1,10 @@
+version: '3'
+services:
+  node-app:
+    build: ./node-app
+    ports:
+      - "3000:3000"
+  python-app:
+    build: ./python-app
+    depends_on:
+      - node-app
